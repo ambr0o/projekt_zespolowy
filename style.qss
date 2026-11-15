@@ -1,0 +1,510 @@
+/* =========================================================
+   GLOBALNY STYL APLIKACJI (MOTYW JASNY / CIEMNY)
+   ========================================================= */
+
+QMainWindow, QDialog, QMessageBox {
+    background-color: __BG_MAIN__;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: __TEXT_PRIMARY__;
+}
+
+QLabel {
+    color: __TEXT_PRIMARY__;
+    background: transparent;
+}
+
+QLabel#PageTitle {
+    font-size: 21px;
+    font-weight: bold;
+    color: __TEXT_PRIMARY__;
+}
+
+QLabel#SectionTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: __TEXT_SECONDARY__;
+}
+
+QLabel#MutedText {
+    font-size: 12px;
+    color: __TEXT_MUTED__;
+}
+
+QLabel#CardTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: __TEXT_PRIMARY__;
+}
+
+QLabel#CardAmount {
+    font-size: 15px;
+    font-weight: bold;
+    color: __TEXT_PRIMARY__;
+}
+
+/* =========================================================
+   KARTY
+   ========================================================= */
+
+QFrame#Card {
+    background-color: __BG_CARD__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 16px;
+}
+
+QFrame#CategoryCard {
+    background-color: __BG_CARD__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 14px;
+}
+QFrame#MetricCard {
+    background-color: __BG_CARD__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 14px;
+}
+
+QLabel#MetricTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: __TEXT_MUTED__;
+}
+
+QLabel#MetricValue {
+    font-size: 17px;
+    font-weight: bold;
+    color: __TEXT_PRIMARY__;
+}
+
+QLabel#MetricValue[state="income"] {
+    color: #10b981;
+}
+
+QLabel#MetricValue[state="expense"] {
+    color: #ef4444;
+}
+
+QLabel#MetricValue[state="neutral"] {
+    color: __TEXT_PRIMARY__;
+}
+QFrame#CategoryCard:hover {
+    background-color: __BG_CARD_HOVER__;
+    border: 1px solid #3b82f6;
+}
+
+/* =========================================================
+   LEWY PANEL BOCZNY (NAWIGACJA)
+   ========================================================= */
+
+QWidget#Sidebar {
+    background-color: __SIDEBAR_BG__;
+    border-right: 1px solid __SIDEBAR_BORDER__;
+}
+
+QLabel#AppLogo {
+    color: #f8fafc;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+QListWidget#NavList {
+    background-color: __SIDEBAR_BG__;
+    border: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    outline: 0;
+}
+
+QListWidget#NavList::item {
+    padding: 14px 18px;
+    border-left: 4px solid transparent;
+    color: #cbd5e1;
+}
+
+QListWidget#NavList::item:hover {
+    background-color: __SIDEBAR_HOVER__;
+    color: #ffffff;
+}
+
+QListWidget#NavList::item:selected {
+    background-color: __SIDEBAR_ACTIVE__;
+    color: #ffffff;
+    font-weight: bold;
+    border-left: 4px solid #3b82f6;
+}
+
+QPushButton#ThemeToggleBtn {
+    background-color: __SIDEBAR_HOVER__;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #f8fafc;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+
+QPushButton#ThemeToggleBtn:hover {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    color: #ffffff;
+}
+
+/* =========================================================
+   PRZEŁĄCZNIKI ZAKŁADEK (WYDATKI / PRZYCHODY ORAZ OKRESY)
+   ========================================================= */
+
+QFrame#SegmentedContainer {
+    background-color: __BG_SEGMENT__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 12px;
+}
+
+QPushButton#SegmentBtn {
+    background: transparent;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    color: __TEXT_MUTED__;
+}
+
+QPushButton#SegmentBtn:hover {
+    color: __TEXT_PRIMARY__;
+}
+
+QPushButton#SegmentBtn[active="expense"] {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+QPushButton#SegmentBtn[active="income"] {
+    background-color: #10b981;
+    color: #ffffff;
+}
+
+QFrame#PeriodBar {
+    background-color: __BG_CARD__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 12px;
+}
+
+QPushButton#PeriodBtn {
+    background: transparent;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    color: __TEXT_MUTED__;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QPushButton#PeriodBtn:hover {
+    background-color: __BG_CARD_HOVER__;
+    color: __TEXT_PRIMARY__;
+}
+
+QPushButton#PeriodBtn:checked {
+    background-color: __PERIOD_ACTIVE_BG__;
+    color: __PERIOD_ACTIVE_TEXT__;
+}
+
+QPushButton#PeriodNavBtn {
+    background-color: __BG_INPUT__;
+    border: 1px solid __BORDER__;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: __TEXT_PRIMARY__;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+QPushButton#PeriodNavBtn:hover {
+    background-color: __BG_CARD_HOVER__;
+    border-color: #3b82f6;
+}
+
+QLabel#PeriodRangeLabel {
+    font-size: 14px;
+    font-weight: bold;
+    color: __TEXT_PRIMARY__;
+    padding: 0px 8px;
+}
+
+/* =========================================================
+   PRZYCISKI AKCJI
+   ========================================================= */
+
+QPushButton {
+    background-color: __BG_CARD__;
+    border: 1px solid __BORDER__;
+    border-radius: 9px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: __TEXT_PRIMARY__;
+}
+
+QPushButton:hover {
+    background-color: __BG_CARD_HOVER__;
+    border-color: #3b82f6;
+}
+
+QPushButton#PrimaryBtn {
+    background-color: #3b82f6;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 9px 16px;
+}
+
+QPushButton#PrimaryBtn:hover {
+    background-color: #2563eb;
+}
+
+QPushButton#ExpenseActionBtn {
+    background-color: #ef4444;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 9px 18px;
+    border-radius: 10px;
+}
+
+QPushButton#ExpenseActionBtn:hover {
+    background-color: #dc2626;
+}
+
+QPushButton#IncomeActionBtn {
+    background-color: #10b981;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 9px 18px;
+    border-radius: 10px;
+}
+
+QPushButton#IncomeActionBtn:hover {
+    background-color: #059669;
+}
+
+QPushButton#DangerBtn {
+    background-color: __DANGER_BG__;
+    border: 1px solid __DANGER_BORDER__;
+    color: __DANGER_TEXT__;
+}
+
+QPushButton#DangerBtn:hover {
+    background-color: __DANGER_HOVER__;
+    border-color: __DANGER_TEXT__;
+}
+
+/* =========================================================
+   POLA FORMULARZY, LISTY ROZWIJANE I KALENDARZ
+   ========================================================= */
+
+QLineEdit, QComboBox, QDateEdit {
+    background-color: __BG_INPUT__;
+    border: 1px solid __BORDER__;
+    border-radius: 9px;
+    padding: 8px 11px;
+    font-size: 13px;
+    color: __TEXT_PRIMARY__;
+}
+
+QLineEdit:focus, QComboBox:focus, QDateEdit:focus {
+    background-color: __BG_CARD__;
+    border: 1px solid #3b82f6;
+}
+
+QComboBox::drop-down, QDateEdit::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 28px;
+    border-left: 1px solid __BORDER__;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: __BG_CARD_HOVER__;
+}
+
+QComboBox::down-arrow, QDateEdit::down-arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid __TEXT_SECONDARY__;
+}
+
+QComboBox QAbstractItemView {
+    background-color: __BG_CARD__;
+    color: __TEXT_PRIMARY__;
+    border: 1px solid __BORDER__;
+    selection-background-color: __SELECT_BG__;
+    selection-color: __SELECT_TEXT__;
+    outline: 0;
+}
+
+QCalendarWidget QWidget {
+    background-color: __BG_CARD__;
+    color: __TEXT_PRIMARY__;
+}
+
+QCalendarWidget QToolButton {
+    background-color: __BG_CARD__;
+    color: __TEXT_PRIMARY__;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+QCalendarWidget QToolButton:hover {
+    background-color: __BG_CARD_HOVER__;
+}
+
+QCalendarWidget QAbstractItemView {
+    background-color: __BG_CARD__;
+    color: __TEXT_PRIMARY__;
+    selection-background-color: #3b82f6;
+    selection-color: #ffffff;
+}
+
+QLabel#CardAmount {
+    font-size: 15px;
+    font-weight: bold;
+    color: __TEXT_PRIMARY__;
+}
+
+QLabel#CategoryPercent {
+    font-size: 13px;
+    font-weight: 600;
+    color: __TEXT_MUTED__;
+    background: transparent;
+}
+
+/* =========================================================
+   LISTY UCZESTNIKÓW I TABELE
+   ========================================================= */
+
+QListWidget#MembersDraftList {
+    background-color: __BG_INPUT__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 10px;
+    padding: 4px;
+    font-size: 13px;
+    color: __TEXT_PRIMARY__;
+}
+
+QListWidget#MembersDraftList::item {
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: __TEXT_PRIMARY__;
+}
+
+QListWidget#MembersDraftList::item:selected {
+    background-color: __SELECT_BG__;
+    color: __SELECT_TEXT__;
+}
+
+QTableWidget {
+    background-color: __BG_CARD__;
+    color: __TEXT_PRIMARY__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 12px;
+    gridline-color: __BORDER_LIGHT__;
+    font-size: 13px;
+    selection-background-color: __SELECT_BG__;
+    selection-color: __SELECT_TEXT__;
+}
+
+QTableWidget::item {
+    padding: 6px;
+    color: __TEXT_PRIMARY__;
+    background-color: __BG_CARD__;
+}
+
+QTableWidget::item:selected {
+    background-color: __SELECT_BG__;
+    color: __SELECT_TEXT__;
+}
+
+QHeaderView::section {
+    background-color: __BG_HEADER__;
+    color: __TEXT_SECONDARY__;
+    border: none;
+    border-bottom: 1px solid __BORDER_LIGHT__;
+    padding: 9px;
+    font-weight: bold;
+}
+
+QTableCornerButton::section {
+    background-color: __BG_HEADER__;
+    border: none;
+}
+
+/* =========================================================
+   PASKI PRZEWIJANIA
+   ========================================================= */
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 2px;
+}
+
+QScrollBar::handle:vertical {
+    background: __BORDER__;
+    border-radius: 4px;
+    min-height: 28px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #3b82f6;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+/* =========================================================
+   KREATOR KATEGORII (SIATKA IKON I PODGLĄD)
+   ========================================================= */
+
+QFrame#PreviewBox {
+    background-color: __BG_INPUT__;
+    border: 1px dashed __BORDER__;
+    border-radius: 12px;
+}
+
+QFrame#CategoryManageRow {
+    background-color: __BG_INPUT__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 11px;
+}
+
+QPushButton#IconChoiceBtn {
+    background-color: __BG_INPUT__;
+    border: 1px solid __BORDER_LIGHT__;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+QPushButton#IconChoiceBtn:hover {
+    background-color: __BG_CARD_HOVER__;
+    border-color: #3b82f6;
+}
+
+QPushButton#IconChoiceBtn:checked {
+    background-color: #3b82f6;
+    border: 2px solid #2563eb;
+}
+
+QPushButton#MiniIconBtn {
+    background-color: __BG_INPUT__;
+    border: 1px solid __BORDER__;
+    border-radius: 9px;
+    padding: 6px 10px;
+}
+
+QPushButton#MiniIconBtn:hover {
+    background-color: __BG_CARD_HOVER__;
+    border-color: #3b82f6;
+}
