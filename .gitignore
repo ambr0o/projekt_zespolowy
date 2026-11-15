@@ -1,0 +1,23 @@
+# Środowisko wirtualne Pythona
+.venv/
+venv/
+env/
+
+# Pliki tymczasowe Pythona
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Lokalna baza danych z wpisami testowymi
+*.db
+*.sqlite
+*.sqlite3
+
+# Pliki budowania aplikacji .exe (PyInstaller)
+build/
+dist/
+*.spec
+
+# Ustawienia edytorów kodu
+.vscode/
+.idea/
